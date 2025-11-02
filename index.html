@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Modo Cine</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div id="app">
+    <!-- Pantallas -->
+    <section id="buscar" class="active">
+      <header><h1>Buscar</h1></header>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar película..." />
+        <button id="searchBtn"><img src="assets/icons/search.svg" /></button>
+      </div>
+      <div id="categorias" class="grid">
+        <div class="cat">Terror</div>
+        <div class="cat">Drama</div>
+        <div class="cat">Comedia</div>
+        <div class="cat">Acción</div>
+        <div class="cat">Ciencia ficción</div>
+      </div>
+      <div id="resultados" class="cards"></div>
+    </section>
+
+    <section id="biblioteca">
+      <header><h1>Biblioteca</h1></header>
+      <div id="libraryList" class="cards"></div>
+    </section>
+
+    <section id="apps">
+      <header><h1>Apps</h1></header>
+      <div id="appsList" class="cards"></div>
+    </section>
+
+    <section id="config">
+      <header><h1>Configuración</h1></header>
+      <ul class="settings">
+        <li>Cuenta</li>
+        <li>Idioma</li>
+        <li>Calidad de streaming</li>
+        <li>Tema oscuro / claro</li>
+      </ul>
+    </section>
+
+    <!-- Video player modal -->
+    <div id="playerModal" class="hidden">
+      <video id="player" controls></video>
+      <button id="closePlayer">✕</button>
+    </div>
+
+    <!-- Nav inferior -->
+    <nav class="bottom-nav">
+      <button data-tab="buscar" class="active"><img src="assets/icons/search.svg"><span>Buscar</span></button>
+      <button data-tab="biblioteca"><img src="assets/icons/library.svg"><span>Biblioteca</span></button>
+      <button data-tab="apps"><img src="assets/icons/apps.svg"><span>Apps</span></button>
+      <button data-tab="config"><img src="assets/icons/settings.svg"><span>Configuración</span></button>
+    </nav>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
